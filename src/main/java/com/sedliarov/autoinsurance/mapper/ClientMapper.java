@@ -1,24 +1,24 @@
 package com.sedliarov.autoinsurance.mapper;
 
-import com.sedliarov.autoinsurance.model.dto.UserDto;
-import com.sedliarov.autoinsurance.model.entity.User;
+import com.sedliarov.autoinsurance.model.dto.ClientDto;
+import com.sedliarov.autoinsurance.model.entity.Client;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 /**
- * Mapper for {@link UserDto} and {@link User}.
+ * Mapper for {@link ClientDto} and {@link Client}.
  *
  * @author  Kirill Sedliarov
  */
 @Mapper
-public interface UserMapper {
+public interface ClientMapper {
 
   /**
    * Creating instance to student mapper
    */
-  UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
+  ClientMapper INSTANCE = Mappers.getMapper(ClientMapper.class);
 
-  User dtoToEntity(UserDto studentDto);
+  Client dtoToEntity(ClientDto clientDto);
 
-  UserDto entityToDto(User student);
+  ClientDto entityToDto(Client client);
 }
